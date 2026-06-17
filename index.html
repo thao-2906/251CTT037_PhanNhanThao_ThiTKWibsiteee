@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - PYU University</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>PYU <span>UNIVERSITY</span></span>
+            </div>
+            
+            <nav class="menu">
+                <a href="#" class="menu-item active"><i class="fa-solid fa-house"></i> Dashboard</a>
+                <a href="#" class="menu-item"><i class="fa-solid fa-user-group"></i> Sinh viên</a>
+                <a href="#" class="menu-item"><i class="fa-solid fa-chalkboard-user"></i> Lớp học</a>
+                <a href="#" class="menu-item"><i class="fa-solid fa-calendar-check"></i> Điểm danh</a>
+                <a href="#" class="menu-item"><i class="fa-solid fa-chart-pie"></i> Báo cáo</a>
+                <a href="#" class="menu-item"><i class="fa-solid fa-gear"></i> Cài đặt</a>
+            </nav>
+
+            <div class="logout">
+                <a href="#" class="menu-item"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <h2>Student Dashboard</h2>
+                <div class="user-profile">
+                    <div class="notification">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="badge"></span>
+                    </div>
+                    <img src="https://i.pravatar.cc/40" alt="Admin Avatar" class="avatar">
+                    <div class="user-info">
+                        <span class="name">Admin</span>
+                        <span class="role">Quản trị viên</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="overview-section">
+                <h3>Tổng quan</h3>
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-icon blue"><i class="fa-solid fa-users"></i></div>
+                        <div class="card-data">
+                            <span class="card-title">Tổng sinh viên</span>
+                            <span class="card-value">1.200</span>
+                            <span class="card-trend up"><i class="fa-solid fa-arrow-trend-up"></i> 12% so với tháng trước</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon green"><i class="fa-solid fa-book-open"></i></div>
+                        <div class="card-data">
+                            <span class="card-title">Lớp học</span>
+                            <span class="card-value">48</span>
+                            <span class="card-trend up"><i class="fa-solid fa-arrow-trend-up"></i> 5% so với tháng trước</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon purple"><i class="fa-solid fa-percent"></i></div>
+                        <div class="card-data">
+                            <span class="card-title">Tỷ lệ chuyên cần</span>
+                            <span class="card-value">92.5%</span>
+                            <span class="card-trend down"><i class="fa-solid fa-arrow-trend-down"></i> 3% so với tháng trước</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon orange"><i class="fa-solid fa-user-tie"></i></div>
+                        <div class="card-data">
+                            <span class="card-title">Giảng viên</span>
+                            <span class="card-value">64</span>
+                            <span class="card-trend up"><i class="fa-solid fa-arrow-trend-up"></i> 8% so với tháng trước</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="student-section">
+                <div class="section-header">
+                    <h3>Danh sách sinh viên</h3>
+                    <div class="actions">
+                        <div class="search-box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Tìm kiếm sinh viên...">
+                        </div>
+                        <button class="btn btn-filter"><i class="fa-solid fa-filter"></i> Lọc</button>
+                        <button class="btn btn-add"><i class="fa-solid fa-plus"></i> Thêm sinh viên</button>
+                    </div>
+                </div>
+
+                <div class="grid-table">
+                    <div class="grid-row table-header">
+                        <div class="grid-cell"><input type="checkbox" id="select-all"></div>
+                        <div class="grid-cell">MSSV</div>
+                        <div class="grid-cell">Họ và tên</div>
+                        <div class="grid-cell">Lớp</div>
+                        <div class="grid-cell">Email</div>
+                        <div class="grid-cell">Điểm TB</div>
+                        <div class="grid-cell">Chuyên cần</div>
+                        <div class="grid-cell">Hành động</div>
+                    </div>
+
+                    <div class="grid-row">
+                        <div class="grid-cell"><input type="checkbox" class="row-checkbox"></div>
+                        <div class="grid-cell">SV001</div>
+                        <div class="grid-cell bold">Nguyễn Văn A</div>
+                        <div class="grid-cell">CNTT1</div>
+                        <div class="grid-cell">nguyenvana@example.com</div>
+                        <div class="grid-cell bold">8.5</div>
+                        <div class="grid-cell text-green">95%</div>
+                        <div class="grid-cell"><button class="btn-action"><i class="fa-solid fa-ellipsis"></i></button></div>
+                    </div>
+
+                    <div class="grid-row">
+                        <div class="grid-cell"><input type="checkbox" class="row-checkbox"></div>
+                        <div class="grid-cell">SV002</div>
+                        <div class="grid-cell bold">Trần Thị B</div>
+                        <div class="grid-cell">CNTT1</div>
+                        <div class="grid-cell">tranthib@example.com</div>
+                        <div class="grid-cell bold">7.8</div>
+                        <div class="grid-cell text-green">92%</div>
+                        <div class="grid-cell"><button class="btn-action"><i class="fa-solid fa-ellipsis"></i></button></div>
+                    </div>
+
+                    <div class="grid-row">
+                        <div class="grid-cell"><input type="checkbox" class="row-checkbox"></div>
+                        <div class="grid-cell">SV003</div>
+                        <div class="grid-cell bold">Lê Văn C</div>
+                        <div class="grid-cell">CNTT2</div>
+                        <div class="grid-cell">levanc@example.com</div>
+                        <div class="grid-cell bold">8.2</div>
+                        <div class="grid-cell text-green">90%</div>
+                        <div class="grid-cell"><button class="btn-action"><i class="fa-solid fa-ellipsis"></i></button></div>
+                    </div>
+
+                    <div class="grid-row">
+                        <div class="grid-cell"><input type="checkbox" class="row-checkbox"></div>
+                        <div class="grid-cell">SV004</div>
+                        <div class="grid-cell bold">Phạm Thị D</div>
+                        <div class="grid-cell">CNTT2</div>
+                        <div class="grid-cell">phamthid@example.com</div>
+                        <div class="grid-cell bold">7.5</div>
+                        <div class="grid-cell text-green">88%</div>
+                        <div class="grid-cell"><button class="btn-action"><i class="fa-solid fa-ellipsis"></i></button></div>
+                    </div>
+
+                    <div class="grid-row">
+                        <div class="grid-cell"><input type="checkbox" class="row-checkbox"></div>
+                        <div class="grid-cell">SV005</div>
+                        <div class="grid-cell bold">Hoàng Văn E</div>
+                        <div class="grid-cell">CNTT3</div>
+                        <div class="grid-cell">hoangvane@example.com</div>
+                        <div class="grid-cell bold">8.9</div>
+                        <div class="grid-cell text-green">96%</div>
+                        <div class="grid-cell"><button class="btn-action"><i class="fa-solid fa-ellipsis"></i></button></div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <p>&copy; 2024 PYU University. All rights reserved.</p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
